@@ -130,6 +130,8 @@ catalog:
                 path: "/en/setup/backend/backend-bookkeeper-monitoring"
               - name: "ClickHouse"
                 path: "/en/setup/backend/backend-clickhouse-monitoring"
+              - name: "OceanBase"
+                path: "/en/setup/backend/backend-mysql-monitoring"
           - name: "MQ Monitoring"
             catalog:
               - name: "RabbitMQ"

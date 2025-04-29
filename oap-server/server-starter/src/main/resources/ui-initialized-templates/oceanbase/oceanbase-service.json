@@ -1,0 +1,87 @@
+[
+  {
+    "id": "OceanBase-Service",
+    "configuration": {
+      "children": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 24,
+          "h": 33,
+          "i": "0",
+          "type": "Tab",
+          "children": [
+            {
+              "name": "Inspections",
+              "children": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 6,
+                  "h": 13,
+                  "i": "1",
+                  "type": "Widget",
+                  "graph": {
+                    "type": "Line",
+                    "step": false,
+                    "smooth": false,
+                    "showSymbol": false,
+                    "showXAxis": true,
+                    "showYAxis": true
+                  },
+                  "widget": {
+                    "title": "Current QPS"
+                  },
+                  "metricConfig": [
+                    {
+                      "label": "QPS"
+                    }
+                  ],
+                  "expressions": [
+                    "aggregate_labels(meter_mysql_qps,sum)"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Instances",
+              "children": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 24,
+                  "h": 29,
+                  "i": "0",
+                  "type": "Widget",
+                  "graph": {
+                    "type": "InstanceList",
+                    "dashboardName": "OceanBase-Instance",
+                    "fontSize": 12
+                  },
+                  "metricConfig": [
+                    {
+                      "unit": "Day",
+                      "label": "Uptime"
+                    }
+                  ],
+                  "expressions": [
+                    "meter_oceanbase_instance_uptime/3600/24"
+                  ],
+                  "subExpressions": [
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "layer": "OCEANBASE",
+      "entity": "Service",
+      "name": "OceanBase-Service",
+      "isRoot": false,
+      "isDefault": true,
+      "id": "OceanBase-Service"
+    }
+  }
+]

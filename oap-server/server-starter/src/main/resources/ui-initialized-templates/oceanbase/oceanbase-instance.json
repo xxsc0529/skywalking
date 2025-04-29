@@ -1,0 +1,40 @@
+[
+  {
+    "id": "OceanBase-Instance",
+    "configuration": {
+      "children": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 6,
+          "h": 9,
+          "i": "0",
+          "type": "Widget",
+          "graph": {
+            "type": "Card",
+            "fontSize": 40,
+            "textAlign": "center",
+            "showUnit": true
+          },
+          "widget": {
+            "title": "OceanBase Uptime"
+          },
+          "metricConfig": [
+            {
+              "unit": "day"
+            }
+          ],
+          "expressions": [
+            "latest(meter_oceanbase_instance_uptime)/3600/24"
+          ]
+        }
+      ],
+      "layer": "OCEANBASE",
+      "entity": "ServiceInstance",
+      "name": "OceanBase-Instance",
+      "id": "oceanbase-instance",
+      "isRoot": false,
+      "isDefault": true
+    }
+  }
+]

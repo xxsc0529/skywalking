@@ -67,10 +67,14 @@ hierarchy:
   KONG:
     K8S_SERVICE: short-name
 
+  OCEANBASE:
+    K8S_SERVICE: short-name
+
   VIRTUAL_DATABASE:
     MYSQL: lower-short-name-with-fqdn
     POSTGRESQL: lower-short-name-with-fqdn
     CLICKHOUSE: lower-short-name-with-fqdn
+    OCEANBASE: lower-short-name-with-fqdn
 
   VIRTUAL_MQ:
     ROCKETMQ: lower-short-name-with-fqdn

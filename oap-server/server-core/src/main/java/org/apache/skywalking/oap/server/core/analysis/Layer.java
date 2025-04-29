@@ -258,8 +258,10 @@ public enum Layer {
      */
     FLINK(42, true),
 
-    OCEANBASE(43,true),
-    ;
+    /**
+     * The OceanBase database is an enterprise-level distributed database
+     */
+    OCEANBASE(43, true);
 
     private final int value;
     /**
